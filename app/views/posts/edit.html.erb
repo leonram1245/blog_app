@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Blog App</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+      <span class = "nav-link"><%=link_to "Home",@post%></span>
+      </li>
+      <li class="nav-item">
+      <span class = "nav-link"><%=link_to "Create a Blog",new_post_path%></span>
+
+      </li>
+      </div>
+      </nav>
+
+<h2 class="text-center" style = "margin-bottom:50px"></h2>
+
+<%= simple_form_for @post do |f| %>
+<div class = "container ">
+<form>
+    <%= f.input :title, input_html: { class: 'input' },wrapper:false, label_html: { class: 'label' } %>
+    <%= f.input :content, input_html: { class: 'textarea' },wrapper:false, label_html: { class: 'label' } %>
+    <%= f.button :submit, 'Update Post', input_html: { class: 'button btn btn-dark' } %>
+
+</form>
+</div>
+<% end %>

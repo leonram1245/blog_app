@@ -1,0 +1,13 @@
+
+<%= simple_form_for @post do |f| %>
+<div class = "container ">
+<form>
+    <%= f.input :title, input_html: { class: 'input' },wrapper:false, label_html: { class: 'label' } %>
+    <%= f.input :content, input_html: { class: 'textarea style = width:120px' },wrapper:false, label_html: { class: 'label' } %>
+    <%= f.button :submit, 'Add Post', input_html: { class: 'btn btn-dark' } %>
+    <br>
+    <br>
+
+</form>
+</div>
+<% end %>

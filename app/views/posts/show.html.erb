@@ -1,0 +1,35 @@
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Blog App</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+      <span class = "nav-link"><%=link_to "Home",@post%></span>
+      </li>
+      <li class="nav-item">
+      <span class = "nav-link"><%=link_to "Create a Blog",new_post_path%></span>
+
+      </li>
+      </div>
+      </nav>
+
+<h2 class="text-center" style = "margin-bottom:50px"></h2>
+
+<div class = "card w-75 mx-auto">
+<div class="card text-center">
+  <div class = "container">
+  <div class="card-header">
+    Blog Article
+  </div>
+  <div class="card-body">
+    <h5 class="card-title"><%=@post.title%></h5>
+    <p class="card-text"><%=@post.content%></p> 
+    <button type="button" class="btn btn-light"><%=link_to "Edit",edit_post_path(@post)%></button>
+<button type="button" class="btn btn-warning"><%=link_to "Delete",post_path(@post),method: :delete,data:{confirm:"Blog will be deleted"}%></button>
+ </div>
+</div>
+</div>
