@@ -22,8 +22,8 @@
 <div class = "container ">
 <form>
     <%= f.input :title, input_html: { class: 'input' },wrapper:false, label_html: { class: 'label' } %>
-    <%= f.input :content, input_html: { class: 'textarea' },wrapper:false, label_html: { class: 'label' } %>
-    <%= f.button :submit, 'Update Post', input_html: { class: 'button btn btn-dark' } %>
+    <%= f.input :content, input_html: { class: 'textarea' },:input_html => { :cols => 5, :rows => 10 }, wrapper:false, label_html: { class: 'label' } %>
+    <%= f.button :submit, 'Update Post', label_html: { class: 'button btn btn-dark' } %>
 
 </form>
 </div>

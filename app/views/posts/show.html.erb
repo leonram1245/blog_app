@@ -33,3 +33,12 @@
  </div>
 </div>
 </div>
+
+<br>
+<div class = 'container'>
+ <h5><%=@post.comments.count%> Comments</h5>
+ <%= render @post.comments%>
+ <div class = 'form-group'>
+ <%= render 'comments/form'%>
+ </div>
+</div>
